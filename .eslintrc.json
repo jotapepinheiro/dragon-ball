@@ -1,0 +1,55 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "prettier",
+        "import-helpers",
+        "react-hooks"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+      "global-require": "off",
+      "import/prefer-default-export": "off",
+      "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+      "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+      "import-helpers/order-imports": [
+        "warn",
+        {
+          "newlinesBetween": "always",
+          "groups": [
+            "/^react/",
+            "module",
+            ["parent", "sibling", "index"]
+          ],
+          "alphabetize": { "order": "asc", "ignoreCase": true }
+        }
+      ],
+      "react/button-has-type": ["error", {
+        "button": true,
+        "submit": true,
+        "reset": true
+      }],
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
+}

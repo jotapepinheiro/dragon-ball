@@ -1,68 +1,170 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Projeto [DragonBall][l-DragonBall] - Versão 1.0
 
-## Available Scripts
+[![SQUADRA Tecnologia}][i-Squadra]][l-Squadra]
 
-In the project directory, you can run:
+## O que este repositório contém
 
-### `yarn start`
+1. Aplicação em [ReactJS][l-ReactJS] com listagem de planetas e personagens do [DragonBall][l-DragonBall].
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Quais as funcionalidades esperadas
 
-### `yarn test`
+```todo
+- [] Espaço para Planetas e Personagens.
+- [] Lista de cards para exibir os - personagens com nome e imagem.
+- [] Usuário possa buscar personagens.
+- [] Lista de planetas.
+- [] Na lista de planetas o usuário pode ir para a página de residentes do planeta.
+- [] Testes unitários.
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+## Qual o objetivo deste repositório
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Processo seletivo para a empresa [SQUADRA Tecnologia][l-Squadra].
+2. Criar uma aplicação em [ReactJS][l-ReactJS] consumindo dados da API do [DragonBall][l-DragonBall].
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## O que é necessário para configurar
 
-### `yarn eject`
+1. Node >= 10.16.0 [Node][l-Node].
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Como instalar
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```shell script
+# Instalar todos os pacotes necessários para executar o aplicativo.
+> yarn install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## Como executar
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```shell script
+# O comando abaixo irá iniciar o projeto na url http://localhost:3000.
+> yarn start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Como testar
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```shell script
+# O comando abaixo irá gerar testes da aplicação.
+> yarn test
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Como gerar uma release
 
-### Making a Progressive Web App
+```shell script
+# O comando abaixo irá gerar os arquivos da release na pasta build.
+> yarn build
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+---
 
-### Advanced Configuration
+## Como posso ver as rotas da API
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Todos os links se encontram na documentação do [DragonBall][l-DragonBall]
 
-### Deployment
+## Endpoits da API
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+> <https://dragon-ball-api.herokuapp.com/api/>
 
-### `yarn build` fails to minify
+```json
+{
+  "characters": "https://dragon-ball-api.herokuapp.com/api/character",
+  "planets": "https://dragon-ball-api.herokuapp.com/api/planet",
+}
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
+
+## Módulos adicionais
+
+---
+
+## Módulos adicionais para desenvolvimento
+
+> [ESLint][l-ESLint] - Manter o padrão de código.
+
+```shell script
+# Instalar
+> yarn add eslint -D
+
+# Configurar
+> yarn eslint --init
+
+> * To check syntax, find problems, and enforce code style
+> * JavaScript modules (import/export)
+> * React
+> * No
+> * Browser
+> * Use a popular style guide
+> * Airbnb
+> * JSON
+```
+
+---
+
+> [ESLint Import Helpers][l-ESLint-Import-Helpers] - Odenar imports de arquivos
+
+```shell script
+# Instalar
+> yarn add eslint-plugin-import-helpers -D
+```
+
+---
+
+> [Tailwindcss][l-Tailwindcss] - Estrutura de CSS
+
+```shell script
+# Instalar
+> yarn add tailwindcss -D
+
+# Configurar
+> npx tailwind init --full
+```
+
+---
+
+> 1. [CLI PostCSS][l-Postcss-Cli] - Minificar arquivos
+> 2. [Autoprefixer][l-Autoprefixer] - Analisar CSS e adicionar prefixos
+
+```shell script
+# Instalar
+> yarn add postcss-cli autoprefixer -D
+
+# Configurar
+> touch postcss.config.js
+```
+
+---
+
+> [ESLint React Hooks][l-ESLint-React-Hooks] - Validar React Hooks
+
+```shell script
+# Instalar
+> yarn add eslint-plugin-react-hooks -D
+```
+
+[i-Squadra]: doc/img/logo.svg "SQUADRA Tecnologia"
+
+[l-Squadra]: https://www.squadra.com.br
+[l-Node]: https://nodejs.org/en/download
+[l-ReactJS]: https://pt-br.reactjs.org
+[l-DragonBall]: https://dragon-ball-api.herokuapp.com/documentation
+
+[l-Tailwindcss]: https://tailwindcss.com
+[l-ESLint]: https://github.com/eslint/eslint
+[l-ESLint-Import-Helpers]: https://github.com/Tibfib/eslint-plugin-import-helpers
+[l-Postcss-Cli]: https://github.com/postcss/postcss-cli
+[l-Autoprefixer]: https://github.com/postcss/autoprefixer
+[l-ESLint-React-Hooks]: https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
